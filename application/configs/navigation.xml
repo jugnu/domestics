@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : navigation.xml
+    Created on : November 2, 2011, 10:47 PM
+    Author     : xp
+    Description:
+        Purpose of the document follows.
+-->
+
+<config>
+    <nav>
+        
+        <logut>
+            <label>logout</label>
+            <module>default</module>
+            <controller>authentication</controller>
+            <action>logout</action>
+            <resource>default:authentication</resource>
+            <privilege>logout</privilege>
+        </logut>
+        
+        <login>
+            <label>login</label>    
+            <module>default</module>
+            <controller>authentication</controller>
+            <action>login</action>
+            <resource>default:authentication</resource>
+            <privilege>login</privilege>
+        </login>
+        
+        <AllItems>
+            <label>AllItems</label>    
+            <uri>#</uri>
+            <resource>shop:main</resource>
+            <privilege>index</privilege>
+            <pages>
+                <list>
+                    <label>List</label>
+                    <module>shop</module>
+                    <controller>main</controller>
+                    <action>items</action>
+                </list>
+            </pages>
+        </AllItems>
+        
+        <Categories>
+            <label>Categories</label>    
+            <uri>#</uri>
+            <resource>admin:category</resource>
+            <privilege>index</privilege>
+            <pages>
+                <Add>
+                    <label>Add</label>
+                    <module>admin</module>
+                    <controller>category</controller>
+                    <action>add</action>
+                </Add>
+                <list>
+                    <label>All Items</label>
+                    <module>admin</module>
+                    <controller>category</controller>
+                    <action>list</action>
+                </list>
+                <update>
+                    <label>Update</label>
+                    <module>admin</module>
+                    <controller>category</controller>
+                    <action>update</action>
+                </update>
+            </pages>
+        </Categories>
+    </nav>
+
+</config>
